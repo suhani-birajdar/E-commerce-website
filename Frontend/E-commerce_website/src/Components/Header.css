@@ -1,0 +1,85 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background: #d9cedc;
+  border-bottom: 1px solid #ececec;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #6a4875;
+  cursor: pointer;
+}
+
+.navigators {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navigators a,
+.navigators button,
+.navigators span {
+  font-size: 0.95rem;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navigators a:hover,
+.navigators button:hover {
+  color: #888;
+}
+
+.cart {
+  position: relative;
+  font-weight: 500;
+}
+
+.login {
+  border: 1px solid #5e5858 !important;
+  padding: 8px 18px;
+  border-radius: 30px;
+}
+
+.login:hover {
+  background: #f7f7f7;
+}
+
+.logout {
+  border: 1px solid #5e5858 !important;
+  padding: 8px 18px;
+  border-radius: 30px;
+}
+
+.logout:hover {
+  background: #f7f7f7;
+}
+
+.user-name {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navigators {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
