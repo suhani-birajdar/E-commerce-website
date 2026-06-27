@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.admin-layout { display: flex; min-height: 100vh; font-family: 'DM Sans', sans-serif; background: #fafaf8; }
+
+/* ── Sidebar ── */
+.sidebar { width: 220px; min-height: 100vh; background: #fff; border-right: 1px solid #e8e6e1; display: flex; flex-direction: column; padding: 28px 0 20px; position: fixed; top: 0; left: 0; }
+.sidebar-brand { display: flex; align-items: baseline; gap: 2px; padding: 0 24px 28px; border-bottom: 1px solid #f0ede8; }
+.brand-v    { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: #1D9E75; }
+.brand-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: #1a1a1a; letter-spacing: 2px; }
+.brand-tag  { font-size: 9px; font-weight: 500; background: #e8f7f1; color: #157a5a; padding: 2px 6px; border-radius: 20px; margin-left: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.sidebar-nav { display: flex; flex-direction: column; padding: 16px 12px; gap: 4px; flex: 1; }
+.nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: none; background: transparent; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: #6b6b6b; cursor: pointer; text-align: left; transition: background 0.15s, color 0.15s; width: 100%; }
+.nav-item:hover  { background: #f5f3ef; color: #1a1a1a; }
+.nav-item.active { background: #e8f7f1; color: #1D9E75; font-weight: 600; }
+.icon { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.icon svg { width: 18px; height: 18px; }
+.logout-btn { margin: 0 12px 8px; color: #ef4444; width: auto; }
+.logout-btn:hover { background: #fef2f2; color: #dc2626; }
+
+/* ── Main ── */
+.main-content { margin-left: 220px; flex: 1; display: flex; flex-direction: column; min-height: 100vh; }
+.topbar { height: 60px; background: #fff; border-bottom: 1px solid #e8e6e1; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; position: sticky; top: 0; z-index: 10; }
+.topbar-label { font-size: 15px; font-weight: 600; color: #1a1a1a; }
+.seller-topbar-right { display: flex; align-items: center; gap: 10px; }
+.seller-shop-name { font-size: 13px; color: #6b6b6b; font-weight: 500; }
+.admin-avatar { width: 34px; height: 34px; background: #1D9E75; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; }
+.content-body { padding: 32px; }
+
+/* ── Section ── */
+.section { max-width: 1000px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+.section-sub   { font-size: 14px; color: #6b6b6b; margin-bottom: 28px; }
+
+/* ── Table ── */
+.data-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e8e6e1; border-radius: 12px; overflow: hidden; font-size: 14px; }
+.data-table th { background: #fafaf8; padding: 12px 16px; text-align: left; font-size: 12px; font-weight: 600; color: #6b6b6b; text-transform: uppercase; letter-spacing: 0.4px; border-bottom: 1px solid #e8e6e1; }
+.data-table td { padding: 13px 16px; color: #1a1a1a; border-bottom: 1px solid #f0ede8; }
+.data-table tbody tr:last-child td { border-bottom: none; }
+.data-table tbody tr:hover { background: #fafaf8; }
+.product-name { font-weight: 500; }
+.product-desc { font-size: 12px; color: #6b6b6b; margin-top: 2px; }
+
+/* ── Badges ── */
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+.badge-approved { background: #e8f7f1; color: #157a5a; }
+.badge-pending  { background: #fef9ec; color: #92660a; }
+.badge-rejected { background: #fef2f2; color: #dc2626; }
+
+/* ── Action Buttons ── */
+.action-btns { display: flex; gap: 8px; }
+.action-btn { display: flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 8px; border: 1px solid; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s; }
+.action-btn.edit   { border-color: #1D9E75; color: #1D9E75; background: #f0faf6; }
+.action-btn.edit:hover   { background: #1D9E75; color: #fff; }
+.action-btn.delete { border-color: #ef4444; color: #ef4444; background: #fef2f2; }
+.action-btn.delete:hover { background: #ef4444; color: #fff; }
+
+/* ── Form ── */
+.settings-card { background: #fff; border: 1px solid #e8e6e1; border-radius: 14px; padding: 28px 32px; max-width: 560px; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 13px; font-weight: 500; color: #6b6b6b; margin-bottom: 6px; }
+.form-input { width: 100%; padding: 10px 14px; border: 1px solid #e8e6e1; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; color: #1a1a1a; background: #fafaf8; outline: none; transition: border-color 0.15s; }
+.form-input:focus { border-color: #1D9E75; background: #fff; }
+.form-input:disabled { opacity: 0.6; cursor: not-allowed; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.save-btn { margin-top: 8px; padding: 11px 28px; background: #1D9E75; color: #fff; border: none; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+.save-btn:hover { background: #157a5a; }
+.save-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+.cancel-btn { margin-top: 8px; margin-left: 12px; padding: 11px 28px; background: transparent; color: #6b6b6b; border: 1px solid #e8e6e1; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.15s; }
+.cancel-btn:hover { border-color: #1a1a1a; color: #1a1a1a; }
+
+/* ── Image Preview ── */
+.image-preview { margin-bottom: 16px; }
+.image-preview img { width: 120px; height: 120px; object-fit: cover; border-radius: 10px; border: 1px solid #e8e6e1; }
+
+/* ── Shop Info ── */
+.shop-info-row { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.shop-avatar { width: 56px; height: 56px; background: #1D9E75; color: #fff; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; flex-shrink: 0; }
+.shop-name  { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: #1a1a1a; }
+.shop-owner { font-size: 13px; color: #6b6b6b; margin-top: 4px; }
+.info-divider { height: 1px; background: #f0ede8; margin-bottom: 20px; }
+.info-note { font-size: 12px; color: #6b6b6b; margin-top: 12px; }

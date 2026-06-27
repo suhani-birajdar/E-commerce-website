@@ -1,0 +1,341 @@
+/* ── Base ── */
+.home {
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a1a;
+  background: #f9f7f4;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn--primary {
+  background: #1D9E75;
+  color: #fff;
+  border: 2px solid #1D9E75;
+}
+.btn--primary:hover {
+  background: #178a63;
+  border-color: #178a63;
+}
+.btn--outline {
+  background: transparent;
+  color: #1D9E75;
+  border: 2px solid #1D9E75;
+}
+.btn--outline:hover {
+  background: #1D9E75;
+  color: #fff;
+}
+.btn--white {
+  background: #fff;
+  color: #1D9E75;
+  border: 2px solid #fff;
+  font-weight: 700;
+}
+.btn--white:hover {
+  background: transparent;
+  color: #fff;
+}
+
+/* ── Section title ── */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #1a1a1a;
+}
+
+/* ════════════════════════
+   HERO
+════════════════════════ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 5rem 6rem;
+  background: linear-gradient(135deg, #f9f7f4 60%, #edf7f3 100%);
+  min-height: 88vh;
+}
+
+.hero__content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1D9E75;
+  background: #e8f7f1;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+}
+
+.hero__heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin-bottom: 1.25rem;
+}
+
+.hero__heading em {
+  font-style: italic;
+  color: #1D9E75;
+}
+
+.hero__sub {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Visual grid */
+.hero__visual {
+  flex: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 420px;
+}
+
+.hero__card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.hero__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(29,158,117,0.15);
+}
+
+.hero__card--1 { transform: translateY(-8px); }
+.hero__card--3 { transform: translateY(-8px); }
+
+.card-emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.hero__card p {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444;
+  margin: 0;
+}
+
+/* Signature diagonal accent stripe */
+.hero__accent-stripe {
+  position: absolute;
+  width: 6px;
+  height: 120%;
+  background: linear-gradient(180deg, #1D9E75, #a8edcc);
+  border-radius: 3px;
+  left: 50%;
+  top: -10%;
+  transform: rotate(12deg);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ════════════════════════
+   CATEGORIES
+════════════════════════ */
+.categories {
+  padding: 5rem 6rem;
+  background: #fff;
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  border: 1.5px solid #ece9e4;
+  background: #f9f7f4;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.cat-card:hover {
+  border-color: #1D9E75;
+  background: #edf7f3;
+  transform: translateY(-2px);
+}
+
+.cat-card__emoji {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.cat-card__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.cat-card__desc {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cat-card__arrow {
+  font-size: 1.1rem;
+  color: #1D9E75;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+
+.cat-card:hover .cat-card__arrow {
+  transform: translateX(4px);
+}
+
+/* ════════════════════════
+   HOW IT WORKS
+════════════════════════ */
+.how-it-works {
+  padding: 5rem 6rem;
+  background: #f9f7f4;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.step__num {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #1D9E75;
+  opacity: 0.3;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.step__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.step__desc {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ════════════════════════
+   CTA BANNER
+════════════════════════ */
+.cta-banner {
+  background: #1D9E75;
+  padding: 5rem 6rem;
+}
+
+.cta-banner__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-banner__inner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.cta-banner__inner p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .hero, .categories, .how-it-works, .cta-banner {
+    padding: 4rem 3rem;
+  }
+  .categories__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+  .hero__visual {
+    max-width: 100%;
+    width: 100%;
+  }
+  .categories, .how-it-works, .cta-banner {
+    padding: 3rem 1.5rem;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}

@@ -22,8 +22,8 @@ const Header = () => {
 
         <nav className='navigators'>
             <button className='products' onClick={() => navigate('/products')}>Products</button>
-            <a href='#'>Become a Seller</a>
-            <a href='#'>About Us</a>
+            <span onClick={() => navigate('/seller/register')}>Become a Seller</span>
+            <span onClick={() => navigate('/about')}>About Us</span>
             <button className='cart' onClick={() => navigate('/cart')}>
                 🛒 Cart {cartCount > 0 && `(${cartCount})`}
             </button>

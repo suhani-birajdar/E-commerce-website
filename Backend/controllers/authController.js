@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt");
 const db = require("../db");
-const sendOtpEmail = require("../utils/sendEmail");
+const { sendOtpEmail } = require("../utils/sendEmail");
 const jwt = require("jsonwebtoken");
 
 const register = async (req, res) => {

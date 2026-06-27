@@ -11,19 +11,30 @@ const Login = () => {
   const { login } = useContext(AuthContext);
 
   const handleLogin = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
+  try {
+    // First try admin login
     try {
-      const response = await api.post('/auth/login', { email, password });
-      login(response.data.user, response.data.token);
-      alert(response.data.message);
-      navigate('/');
-    } catch (error) {
-      console.error(error);
-      const message = error.response?.data?.message || 'Something went wrong. Please try again.';
-      alert(message);
+      const adminRes = await api.post('/admin/login', { email, password });
+      localStorage.setItem('adminToken', adminRes.data.token);
+      navigate('/admin');
+      return;
+    } catch (adminErr) {
+      // Not admin, continue to regular login
     }
-  };
+
+    // Regular user login
+    const response = await api.post('/auth/login', { email, password });
+    login(response.data.user, response.data.token);
+    alert(response.data.message);
+    navigate('/');
+
+  } catch (error) {
+    const message = error.response?.data?.message || 'Something went wrong. Please try again.';
+    alert(message);
+  }
+};
 
   return (
     <div className='form'>
